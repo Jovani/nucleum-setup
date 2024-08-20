@@ -8,6 +8,11 @@ function App() {
     const [playerCount, setPlayerCount] = useState(0)
     const [expansion, setExpansion] = useState('')
 
+    const resetGame = () => {
+        setPlayerCount(0);
+        setExpansion('');
+    }
+
     return (
         <>
             <Box>
@@ -46,7 +51,7 @@ function App() {
                 mb={2}
             >
                 <ButtonGroup>
-                    {expansions.map(({name, key}) => <ExpansionButton
+                    {expansions.map(({ name, key }) => <ExpansionButton
                         key={key}
                         selectedExpansion={expansion}
                         expansionOptionKey={key}
@@ -56,7 +61,7 @@ function App() {
                 </ButtonGroup>
             </Box>
 
-            <SetupBox selectedPlayerCount={playerCount} selectedExpansion={expansion} />
+            <SetupBox selectedPlayerCount={playerCount} selectedExpansion={expansion} resetGame={resetGame} />
         </>
     )
 }

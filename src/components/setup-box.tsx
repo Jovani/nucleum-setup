@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text, Highlight } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Text, Highlight, Button } from "@chakra-ui/react";
 import { BaseSetup } from "./base-setup";
 import { CardSetup } from "./card-setup";
 import { useEffect, useState } from "react";
@@ -8,9 +8,10 @@ import { Expansion, Card as NucleumCard } from "../assets/expansions/card-sets.i
 interface SetupBoxProps {
     selectedPlayerCount: number;
     selectedExpansion: string;
+    resetGame: () => void;
 }
 
-export const SetupBox = ({ selectedPlayerCount, selectedExpansion }: SetupBoxProps) => {
+export const SetupBox = ({ selectedPlayerCount, selectedExpansion, resetGame }: SetupBoxProps) => {
     const [expansion, setExpansion] = useState<Expansion>();
     const [cards, setCards] = useState<NucleumCard[]>([]);
 
@@ -63,6 +64,15 @@ export const SetupBox = ({ selectedPlayerCount, selectedExpansion }: SetupBoxPro
                         <BaseSetup selectedPlayerCount={selectedPlayerCount} expansion={expansion} />
                     </GridItem>
                 </Grid>
+            </Box>
+            <Box py={10}>
+                <Button
+                    size='lg'
+                    colorScheme='red'
+                    onClick={() => resetGame()}
+                >
+                    New Game
+                </Button>
             </Box>
         </>
     );
