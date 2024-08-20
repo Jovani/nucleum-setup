@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text, Highlight, Card } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Text, Highlight } from "@chakra-ui/react";
 import { BaseSetup } from "./base-setup";
 import { CardSetup } from "./card-setup";
 import { useEffect, useState } from "react";
