@@ -56,7 +56,7 @@ export const SetupBox = ({ selectedPlayerCount, selectedExpansion }: SetupBoxPro
             <Box>
                 <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }} flex='1'>
                     <GridItem>
-                        <CardSetup selectedPlayerCount={selectedPlayerCount} cards={cards} />
+                        <CardSetup selectedPlayerCount={selectedPlayerCount} cards={cards} showBoatSetup={expansion.key === 'aus'} />
                     </GridItem>
 
                     <GridItem>

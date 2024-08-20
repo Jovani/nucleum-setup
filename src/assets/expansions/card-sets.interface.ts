@@ -2,7 +2,7 @@ export interface Card {
     key: string;
     publicBuilding: string;
     nucleumToken: string;
-    boats: {
+    boats?: {
         2: number[],
         3: number[],
     };

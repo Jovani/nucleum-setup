@@ -5,10 +5,11 @@ import { useEffect, useState } from "react";
 interface CardSetupProps {
     selectedPlayerCount: number;
     cards: NucleumCard[];
+    showBoatSetup: boolean;
 }
 
-export const CardSetup = ({selectedPlayerCount, cards}: CardSetupProps) => {
-    
+export const CardSetup = ({ selectedPlayerCount, cards, showBoatSetup }: CardSetupProps) => {
+
     const [noMinesCities, setNoMinesCities] = useState<string[]>([]);
     const [boatSpaces, setBoatSpaces] = useState<number[]>([]);
 
@@ -25,12 +26,13 @@ export const CardSetup = ({selectedPlayerCount, cards}: CardSetupProps) => {
                 ? firstCardMines[2]
                 : [...firstCardMines[2], ...firstCardMines[3]]
         )
-
-        setBoatSpaces(
-            selectedPlayerCount === 2
-                ? firstCardBoatSpaces[2]
-                : firstCardBoatSpaces[3]
-        )
+        if (firstCardBoatSpaces) {
+            setBoatSpaces(
+                selectedPlayerCount === 2
+                    ? firstCardBoatSpaces[2]
+                    : firstCardBoatSpaces[3]
+            )
+        }
 
     }, [selectedPlayerCount, cards])
 
@@ -90,18 +92,20 @@ export const CardSetup = ({selectedPlayerCount, cards}: CardSetupProps) => {
                         ))}
                     </Box>
 
-                    <Box>
-                        <Heading size='md'>
-                            Neutral Boat Spaces
-                        </Heading>
-                        {boatSpaces.map((space, index) => (
-                            <Box key={index}>
-                                <Text pt='2' fontSize='sm'>
-                                    {space}
-                                </Text>
-                            </Box>
-                        ))}
-                    </Box>
+                    {showBoatSetup && (
+                        <Box>
+                            <Heading size='md'>
+                                Neutral Boat Spaces
+                            </Heading>
+                            {boatSpaces.map((space, index) => (
+                                <Box key={index}>
+                                    <Text pt='2' fontSize='sm'>
+                                        {space}
+                                    </Text>
+                                </Box>
+                            ))}
+                        </Box>
+                    )}
                 </Stack>
 
             </CardBody>
