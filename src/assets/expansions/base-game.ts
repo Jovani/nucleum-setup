@@ -26,10 +26,6 @@ export const baseGame: Expansion = {
             key: 'AUS10',
             publicBuilding: 'Wagga Wagga',
             nucleumToken: 'Toowoomba',
-            boats: {
-                2: [1, 2, 4],
-                3: [1, 5]
-            },
             noBuildings: [
                 'Port Pirie',
                 'Sydney',
@@ -49,10 +45,6 @@ export const baseGame: Expansion = {
             key: 'AUS11',
             publicBuilding: 'Port Pirie',
             nucleumToken: 'Lucas Heights',
-            boats: {
-                2: [1, 3, 4],
-                3: [3, 4]
-            },
             noBuildings: [
                 'Latrobe',
                 'Sydney',
@@ -72,10 +64,6 @@ export const baseGame: Expansion = {
             key: 'AUS12',
             publicBuilding: 'Newcastle',
             nucleumToken: 'Mildura',
-            boats: {
-                2: [2, 3, 4],
-                3: [2, 3]
-            },
             noBuildings: [
                 'Latrobe',
                 'Geolong',
@@ -95,10 +83,6 @@ export const baseGame: Expansion = {
             key: 'AUS13',
             publicBuilding: '',
             nucleumToken: 'Geelong',
-            boats: {
-                2: [2, 3, 4],
-                3: [3, 5]
-            },
             noBuildings: [
                 'Gold Coast',
                 'Melbourne',
