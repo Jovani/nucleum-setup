@@ -13,7 +13,7 @@ export enum Cities {
     MountThorley = 'Mount Thorley',
     Newcastle = 'Newcastle',
     OlympicDam = 'Olympic Dam',
-    PortPirie = 'PortPirie',
+    PortPirie = 'Port Pirie',
     RadiumHill = 'Radium Hill',
     Sydney = 'Sydney',
     Toongi = 'Toongi',
