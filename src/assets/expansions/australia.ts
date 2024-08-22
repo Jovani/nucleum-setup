@@ -31,12 +31,14 @@ export const australia: Expansion = {
                 2: [1, 2, 3],
                 3: [1, 2]
             },
-            noBuildings: [
-                Cities.GoldCoast,
-                Cities.Sydney,
-                Cities.Hobart,
-                Cities.Adelaide
-            ],
+            noBuildings: {
+                2: [
+                    Cities.GoldCoast,
+                    Cities.Sydney,
+                    Cities.Hobart,
+                    Cities.Adelaide
+                ],
+            },
             noMines: {
                 2: [
                     Cities.MountThorley,
@@ -55,12 +57,14 @@ export const australia: Expansion = {
                 2: [1, 2, 3],
                 3: [1, 3]
             },
-            noBuildings: [
-                Cities.Newcastle,
-                Cities.PortPirie,
-                Cities.Melbourne,
-                Cities.Wollongong
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Newcastle,
+                    Cities.PortPirie,
+                    Cities.Melbourne,
+                    Cities.Wollongong
+                ],
+            },
             noMines: {
                 2: [
                     Cities.MountThorley,
@@ -79,12 +83,14 @@ export const australia: Expansion = {
                 2: [1, 2, 4],
                 3: [1, 4]
             },
-            noBuildings: [
-                Cities.Melbourne,
-                Cities.Melbourne,
-                Cities.Geelong,
-                Cities.Toowoomba
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Melbourne,
+                    Cities.Melbourne,
+                    Cities.Geelong,
+                    Cities.Toowoomba
+                ]
+            },
             noMines: {
                 2: [
                     Cities.Adelaide,
@@ -103,12 +109,14 @@ export const australia: Expansion = {
                 2: [1, 2, 3],
                 3: [1, 5]
             },
-            noBuildings: [
-                Cities.Adelaide,
-                Cities.Brisbane,
-                Cities.WaggaWagga,
-                Cities.Launceston
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Adelaide,
+                    Cities.Brisbane,
+                    Cities.WaggaWagga,
+                    Cities.Launceston
+                ]
+            },
             noMines: {
                 2: [
                     Cities.RadiumHill,
@@ -126,19 +134,20 @@ export const australia: Expansion = {
                 2: [2, 3, 4],
                 3: [4, 5]
             },
-            noBuildings: [
-                Cities.GoldCoast,
-                Cities.Geelong,
-                Cities.Newcastle,
-                Cities.Brisbane
-            ],
+            noBuildings: {
+                2: [
+                    Cities.GoldCoast,
+                    Cities.Geelong,
+                    Cities.Newcastle,
+                    Cities.Brisbane
+                ]
+            },
             noMines: {
                 2: [
                     Cities.OlympicDam,
                     Cities.MountThorley,
                     Cities.BrokenHill,
-                ],
-                3: []
+                ]
             }
         },
         {
@@ -149,12 +158,14 @@ export const australia: Expansion = {
                 2: [2, 3, 4],
                 3: [2, 4]
             },
-            noBuildings: [
-                Cities.Hobart,
-                Cities.Sydney,
-                Cities.Sydney,
-                Cities.Adelaide
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Hobart,
+                    Cities.Sydney,
+                    Cities.Sydney,
+                    Cities.Adelaide
+                ]
+            },
             noMines: {
                 2: [
                     Cities.OlympicDam,
@@ -173,19 +184,20 @@ export const australia: Expansion = {
                 2: [1, 2, 4],
                 3: [2, 5]
             },
-            noBuildings: [
-                Cities.Sydney,
-                Cities.Brisbane,
-                Cities.PortPirie,
-                Cities.WaggaWagga
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Sydney,
+                    Cities.Brisbane,
+                    Cities.PortPirie,
+                    Cities.WaggaWagga
+                ]
+            },
             noMines: {
                 2: [
                     Cities.Adelaide,
                     Cities.Toongi,
                     Cities.OlympicDam,
-                ],
-                3: []
+                ]
             }
         },
         {
@@ -196,19 +208,20 @@ export const australia: Expansion = {
                 2: [1, 3, 4],
                 3: [1, 3]
             },
-            noBuildings: [
-                Cities.Adelaide,
-                Cities.Brisbane,
-                Cities.Hobart,
-                Cities.Toowoomba
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Adelaide,
+                    Cities.Brisbane,
+                    Cities.Hobart,
+                    Cities.Toowoomba
+                ]
+            },
             noMines: {
                 2: [
                     Cities.Latrobe,
                     Cities.Toongi,
                     Cities.OlympicDam,
-                ],
-                3: []
+                ]
             }
         },
         {
@@ -219,18 +232,19 @@ export const australia: Expansion = {
                 2: [1, 2, 4],
                 3: [4, 5]
             },
-            noBuildings: [
-                Cities.GoldCoast,
-                Cities.Wollongong,
-                Cities.Launceston,
-                Cities.Toowoomba
-            ],
+            noBuildings: {
+                2: [
+                    Cities.GoldCoast,
+                    Cities.Wollongong,
+                    Cities.Launceston,
+                    Cities.Toowoomba
+                ]
+            },
             noMines: {
                 2: [
                     Cities.BrokenHill,
                     Cities.Toongi,
-                ],
-                3: []
+                ]
             }
         },
         {
@@ -241,19 +255,20 @@ export const australia: Expansion = {
                 2: [1, 2, 4],
                 3: [1, 5]
             },
-            noBuildings: [
-                Cities.PortPirie,
-                Cities.Sydney,
-                Cities.Newcastle,
-                Cities.Adelaide
-            ],
+            noBuildings: {
+                2: [
+                    Cities.PortPirie,
+                    Cities.Sydney,
+                    Cities.Newcastle,
+                    Cities.Adelaide
+                ]
+            },
             noMines: {
                 2: [
                     Cities.RadiumHill,
                     Cities.Toongi,
                     Cities.Latrobe
-                ],
-                3: []
+                ]
             }
         },
         {
@@ -264,19 +279,20 @@ export const australia: Expansion = {
                 2: [1, 3, 4],
                 3: [3, 4]
             },
-            noBuildings: [
-                Cities.Latrobe,
-                Cities.Sydney,
-                Cities.Brisbane,
-                Cities.Brisbane
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Latrobe,
+                    Cities.Sydney,
+                    Cities.Brisbane,
+                    Cities.Brisbane
+                ]
+            },
             noMines: {
                 2: [
                     Cities.MountThorley,
                     Cities.MountThorley,
                     Cities.RadiumHill
-                ],
-                3: []
+                ]
             }
         },
         {
@@ -287,20 +303,23 @@ export const australia: Expansion = {
                 2: [2, 3, 4],
                 3: [2, 3]
             },
-            noBuildings: [
-                Cities.Latrobe,
-                Cities.Geelong,
-                Cities.Wollongong,
-                Cities.WaggaWagga
-            ],
+            noBuildings: {
+                2: [
+                    Cities.Latrobe,
+                    Cities.Geelong,
+                    Cities.Wollongong,
+                    Cities.WaggaWagga
+                ]
+            },
             noMines: {
-            2: [
-                Cities.RadiumHill,
-                Cities.ToongiCoal
-            ],
-            3: [
-                Cities.Wooltana
-            ]}
+                2: [
+                    Cities.RadiumHill,
+                    Cities.ToongiCoal
+                ],
+                3: [
+                    Cities.Wooltana
+                ]
+            }
         },
         {
             key: 'AUS13',
@@ -310,19 +329,20 @@ export const australia: Expansion = {
                 2: [2, 3, 4],
                 3: [3, 5]
             },
-            noBuildings: [
-                Cities.GoldCoast,
-                Cities.Melbourne,
-                Cities.Hobart,
-                Cities.Newcastle
-            ],
+            noBuildings: {
+                2: [
+                    Cities.GoldCoast,
+                    Cities.Melbourne,
+                    Cities.Hobart,
+                    Cities.Newcastle
+                ]
+            },
             noMines: {
                 2: [
                     Cities.RadiumHill,
                     Cities.ToongiCoal,
                     Cities.OlympicDam
-                ],
-                3: []
+                ]
             }
         }
     ]

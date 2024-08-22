@@ -1,15 +1,19 @@
 export interface Card {
     key: string;
-    publicBuilding: string;
+    publicBuilding?: string;
+    publicBuilding3Plus?: string;
     nucleumToken: string;
     boats?: {
         2: number[],
         3: number[],
     };
-    noBuildings: string[];
+    noBuildings: {
+        2: string[],
+        3?: string[],
+    };
     noMines: {
         2: string[],
-        3: string[],
+        3?: string[],
     };
 }
 
