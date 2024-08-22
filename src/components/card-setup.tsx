@@ -10,6 +10,7 @@ interface CardSetupProps {
 
 export const CardSetup = ({ selectedPlayerCount, cards, showBoatSetup }: CardSetupProps) => {
 
+    const [noBuildingsCities, setNoBuildingsCities] = useState<string[]>([]);
     const [noMinesCities, setNoMinesCities] = useState<string[]>([]);
     const [boatSpaces, setBoatSpaces] = useState<number[]>([]);
 
@@ -18,13 +19,19 @@ export const CardSetup = ({ selectedPlayerCount, cards, showBoatSetup }: CardSet
             return;
         }
 
+        const firstCardBuildings = cards[0].noBuildings;
         const firstCardMines = cards[0].noMines;
         const firstCardBoatSpaces = cards[0].boats;
 
+        setNoBuildingsCities(
+            selectedPlayerCount === 2
+                ? firstCardBuildings[2]
+                : [...firstCardBuildings[2], ...(firstCardBuildings[3] || [])]
+        )
         setNoMinesCities(
             selectedPlayerCount === 2
                 ? firstCardMines[2]
-                : [...firstCardMines[2], ...firstCardMines[3]]
+                : [...firstCardMines[2], ...(firstCardMines[3] || [])]
         )
         if (firstCardBoatSpaces) {
             setBoatSpaces(
@@ -57,10 +64,23 @@ export const CardSetup = ({ selectedPlayerCount, cards, showBoatSetup }: CardSet
                         <Heading size='md'>
                             Neutral Urban Buildings
                         </Heading>
-                        {cards.filter(card => !!card.publicBuilding).map(card => (
+                        {cards.filter(
+                            card => {
+                                if (selectedPlayerCount === 2 && card.publicBuilding) {
+                                    return true;
+                                } else if (selectedPlayerCount > 2 && (card.publicBuilding3Plus || card.publicBuilding)) {
+                                    return true;
+                                }
+                                return false;
+                            }
+                        ).map(card => (
                             <Box key={card.key}>
                                 <Text pt='2' fontSize='sm'>
-                                    {card.publicBuilding}
+                                    {
+                                        card.publicBuilding3Plus && selectedPlayerCount >= 3
+                                            ? card.publicBuilding3Plus
+                                            : card.publicBuilding
+                                    }
                                 </Text>
                             </Box>
                         ))}
@@ -70,7 +90,7 @@ export const CardSetup = ({ selectedPlayerCount, cards, showBoatSetup }: CardSet
                         <Heading size='md'>
                             Urban Rubble Tiles
                         </Heading>
-                        {cards[0].noBuildings.map((city, index) => (
+                        {noBuildingsCities.map((city, index) => (
                             <Box key={index}>
                                 <Text pt='2' fontSize='sm'>
                                     {city}
