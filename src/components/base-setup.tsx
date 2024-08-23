@@ -36,7 +36,7 @@ export const BaseSetup = ({ selectedPlayerCount, expansion }: BaseSetupProps) =>
                                 <ListItem verticalAlign='middle'>
                                     <Flex alignItems='center' justifyContent='center'>
                                         <ListIcon as={CheckCircleIcon} color='green.500' verticalAlign='middle' />
-                                        <Text fontWeight='800'>All</Text>&nbsp;<Text>Starting Action Tiles (tiles with dots)</Text>
+                                        <Text fontWeight='800'>20</Text>&nbsp;<Text> Base Action Tiles (all the tiles with dots)</Text>
                                     </Flex>
                                 </ListItem>
 
