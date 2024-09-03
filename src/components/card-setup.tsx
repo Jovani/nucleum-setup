@@ -74,7 +74,7 @@ const AutomaBox = ({
     </Box>
     <Box>
       <Text pt="2" fontSize="sm">
-        <CityDisplay city={card.publicBuilding} playerCount={playerCount} />
+        <CityDisplay city={card.publicBuilding || card.publicBuilding3Plus} playerCount={playerCount} />
       </Text>
     </Box>
   </Box>
@@ -224,7 +224,7 @@ export const CardSetup = ({
             </InfoBox>
           )}
 
-          {playerCount === 1 && (
+          {selectedPlayerCount === 1 && (
             <Box display="flex" alignItems="center">
               {cards
                 .slice(-3) // Get the last three cards
