@@ -124,7 +124,7 @@ export const CardSetup = ({
             boxSize="40px"
           >
             {cards
-              .slice()
+              .slice(0,4)
               .sort((a, b) =>
                 a.publicBuilding && b.publicBuilding
                   ? a.publicBuilding.name.localeCompare(b.publicBuilding.name)
@@ -133,19 +133,18 @@ export const CardSetup = ({
               .filter((card, index) => {
                 const isLastCard = index === cards.length - 1;
                 return (
-                  (selectedPlayerCount !== 1 || !isLastCard) &&
-                  ((selectedPlayerCount <= 2 && card.publicBuilding) ||
-                    (selectedPlayerCount > 2 &&
+                  (playerCount !== 1 || !isLastCard) &&
+                  ((playerCount <= 2 && card.publicBuilding) ||
+                    (playerCount > 2 &&
                       (card.publicBuilding3Plus || card.publicBuilding)))
                 );
               })
-              .slice(0, 4) // Take only the first 4 cards
               .map((card) => (
                 <Box key={card.key}>
                   <Text fontSize="sm">
                     <CityDisplay
                       city={
-                        selectedPlayerCount >= 3 && card.publicBuilding3Plus
+                        playerCount >= 3 && card.publicBuilding3Plus
                           ? card.publicBuilding3Plus
                           : card.publicBuilding
                       }
@@ -169,7 +168,7 @@ export const CardSetup = ({
             </Text>
           </InfoBox>
 
-          {selectedPlayerCount !== 4 && (
+          {playerCount !== 4 && (
             <InfoBox
               src="images/warning2.jpg"
               alt="Neutral Urban Buildings"
@@ -187,7 +186,7 @@ export const CardSetup = ({
                 ))}
             </InfoBox>
           )}
-          {selectedPlayerCount !== 4 && (
+          {playerCount !== 4 && (
             <InfoBox src="images/warning shape.png" alt="mines" boxSize="50px">
               {noMinesCities
                 .slice()
@@ -225,7 +224,7 @@ export const CardSetup = ({
             </InfoBox>
           )}
 
-          {selectedPlayerCount === 1 && (
+          {playerCount === 1 && (
             <Box display="flex" alignItems="center">
               {cards
                 .slice(-3) // Get the last three cards
