@@ -16,7 +16,7 @@ export const Cities: { [key: string]: City } = {
   Joachimsthal: { name: 'Joachimsthal', numberIds: [6, 6, 6, 6] },
   Karlsbad: { name: 'Karlsbad', numberIds: [0, 0, 9, 9] },
   Leipzig: { name: 'Leipzig', numberIds: [1, 1, 1, 1] },
-  Marienberg: { name: 'Marienberg', numberIds: [0, 0, 8, 8] },
+  Marienberg: { name: 'Marienberg', numberIds: [7, 7, 8, 8] },
   Plauen: { name: 'Plauen', numberIds: [2, 2, 2, 2] },
   Praha: { name: 'Praha', numberIds: [8, 8, 10, 10] },
   Presnitz: { name: 'Preßnitz', numberIds: [11, 11, 17, 17] },
