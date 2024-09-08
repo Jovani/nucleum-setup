@@ -1,0 +1,3 @@
+[submodule "nucleum-setup"]
+    path = nucleum-setup
+    url = https://github.com/jovani/nucleum-setup.git
