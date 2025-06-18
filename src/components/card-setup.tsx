@@ -111,16 +111,18 @@ export const CardSetup = ({
                         </Box>
                     )}
 
-                    <Box>
-                        <Heading size="md">Mining Rubble Tiles</Heading>
-                        {noMinesCities.map((city, index) => (
-                            <Box key={index}>
-                                <Text pt="2" fontSize="sm">
-                                    {city}
-                                </Text>
-                            </Box>
-                        ))}
-                    </Box>
+                    {selectedPlayerCount < 4 && (
+                        <Box>
+                            <Heading size="md">Mining Rubble Tiles</Heading>
+                            {noMinesCities.map((city, index) => (
+                                <Box key={index}>
+                                    <Text pt="2" fontSize="sm">
+                                        {city}
+                                    </Text>
+                                </Box>
+                            ))}
+                        </Box>
+                    )}
 
                     {showBoatSetup && (
                         <Box>
