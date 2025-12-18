@@ -141,8 +141,7 @@ export const baseGame: Expansion = {
                     Cities.Marienberg,
                     Cities.Bautzen,
                     Cities.Grimma,
-                    Cities.Riesa,
-                    Cities.Zwickau,
+                    Cities.Riesa
                 ],
                 3: [
                     Cities.Gorlitz,
